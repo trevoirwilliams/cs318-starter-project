@@ -1,0 +1,183 @@
+:root {
+  --brand: #174a8b;
+  --brand-hover: #103666;
+  --ink: #202938;
+  --surface: #f3f6fa;
+  --paper: #ffffff;
+  --border: #ccd5df;
+  --focus: #a53a13;
+  --space: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+a {
+  color: var(--brand);
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--brand-hover);
+  text-decoration-thickness: 0.15em;
+}
+
+a:focus-visible,
+main:focus {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  display: block;
+  width: fit-content;
+  margin: var(--space);
+  padding: 0.25rem 0.5rem;
+  font-weight: 700;
+}
+
+.site-header,
+.page-content,
+.site-footer {
+  width: 100%;
+  margin-inline: auto;
+  /* padding: var(--space); */
+}
+
+
+.brand {
+  margin: 0 0 var(--space);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space);
+  align-items: center;
+}
+
+.site-nav a {
+  display: inline-block;
+  padding-block: 0.5rem;
+}
+
+.site-nav a[aria-current="page"] {
+  font-weight: 700;
+  text-decoration-thickness: 0.15em;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  overflow-wrap: break-word;
+}
+
+h1 {
+  max-width: 22ch;
+  margin: 0 0 var(--space);
+  font-size: 2.25rem;
+}
+
+h2 {
+  margin: 0 0 var(--space);
+  font-size: 1.75rem;
+}
+
+h3 {
+  margin: 0 0 var(--space);
+  font-size: 1.25rem;
+}
+
+p {
+  margin: 0 0 var(--space);
+}
+
+.hero {
+  margin-block: var(--space) 2rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: var(--surface);
+}
+
+.hero p {
+  max-width: 60ch;
+}
+
+.button-link {
+  display: inline-block;
+  padding: 0.75rem var(--space);
+  border: 2px solid var(--brand);
+  border-radius: 0.375rem;
+  color: var(--paper);
+  background: var(--brand);
+  font-weight: 700;
+}
+
+.button-link:hover {
+  color: var(--paper);
+  background: var(--brand-hover);
+  border-color: var(--brand-hover);
+}
+
+.workshops {
+  margin-bottom: 2rem;
+}
+
+.workshop-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space);
+}
+
+.workshop-card {
+  min-width: 0;
+  margin-bottom: 0;
+  padding: var(--space);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--paper);
+  overflow-wrap: break-word;
+}
+
+.about-section {
+  margin-block: 2rem;
+  max-width: 65ch;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  font-size: 0.875rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (min-width: 48rem) {
+  .workshop-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .hero {
+    padding: 2rem;
+  }
+}
