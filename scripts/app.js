@@ -1,0 +1,1 @@
+console.log("Kingston Skills Hub loaded.");
