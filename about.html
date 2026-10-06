@@ -4,33 +4,75 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About Kingston Skills Hub</title>
-  <!-- <link rel="stylesheet" href="css/styles.css"> -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-  <div class="site-header">
-    <p class="brand">Kingston Skills Hub</p>
-    <div class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="index.html#workshops">Workshops</a>
-      <a href="about.html">About</a>
-    </div>
+<body class="bg-light d-flex flex-column min-vh-100">
+  <div>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg bg-dark shadow-sm" data-bs-theme="dark" aria-label="Main navigation">
+        <div class="container">
+          <p class="brand navbar-brand mb-0">Kingston Skills Hub</p>
+
+          <button class="navbar-toggler" type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarNavAltMarkup"
+                  aria-controls="navbarNavAltMarkup"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="site-nav collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="index.html#workshops">Workshops</a>
+              <a class="nav-link active" aria-current="page" href="about.html">About</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-content container py-5 flex-grow-1">
+      <div class="hero bg-white border rounded-4 shadow-sm p-4 p-lg-5 mb-5">
+        <span class="badge text-bg-primary mb-3">About the Hub</span>
+        <h1 class="display-5 fw-bold mb-3">About the hub</h1>
+        <p class="lead mb-0">We help adults build confidence with technology and workplace skills.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="about-section card h-100 border-0 shadow-sm p-2">
+            <div class="card-body">
+              <h2 class="card-title h3">Who can attend</h2>
+              <p class="card-text mb-0">Beginners are welcome. Bring a notebook and a willingness to practise.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div id="contact" class="about-section card h-100 border-0 shadow-sm p-2">
+            <div class="card-body">
+              <h2 class="card-title h3">Contact and attendance</h2>
+              <p class="card-text">Ask the class facilitator about places and accessibility needs.</p>
+              <p class="card-text text-body-secondary mb-0">All workshop details are fictional and intended for practice.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer bg-dark text-white-50 py-4 mt-5" data-bs-theme="dark">
+      <div class="container">
+        <p class="mb-0 text-center">Kingston Skills Hub is a fictional organisation for this class project.</p>
+      </div>
+    </footer>
   </div>
-  <div class="page-content">
-    <h1>About the hub</h1>
-    <p>We help adults build confidence with technology and workplace skills.</p>
-    <div class="about-section">
-      <h2>Who can attend</h2>
-      <p>Beginners are welcome. Bring a notebook and a willingness to practise.</p>
-    </div>
-    <div id="contact" class="about-section">
-      <h2>Contact and attendance</h2>
-      <p>Ask the class facilitator about places and accessibility needs.</p>
-      <p>All workshop details are fictional and intended for practice.</p>
-    </div>
-  </div>
-  <div class="site-footer">
-    <p>Kingston Skills Hub is a fictional organisation for this class project.</p>
-  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+          crossorigin="anonymous"></script>
   <script src="scripts/app.js"></script>
 </body>
 </html>
